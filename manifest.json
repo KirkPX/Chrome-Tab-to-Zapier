@@ -1,0 +1,43 @@
+{
+    "manifest_version": 3,
+    "name": "Chrome Tab to Zapier",
+    "version": "1.9",
+    "description": "Securely grabs the current tab's URL, title, description, user email, and closes the tab",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "identity",
+      "scripting",
+      "tabs",
+      "notifications"
+    ],
+    "host_permissions": [
+      "https://*.zapier.com/*",
+      "<all_urls>"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "commands": {
+      "trigger-zap": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+S",
+          "mac": "Command+Shift+S"
+        },
+        "description": "Trigger Zapier zap and close tab"
+      },
+      "trigger-zap-with-title": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+A",
+          "mac": "Command+Shift+A"
+        },
+        "description": "Enter title, trigger Zapier zap, and close tab"
+      }
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URL Grabber Settings</title>
+  <style>
+    body { width: 300px; padding: 10px; font-family: Arial, sans-serif; }
+    input { width: 100%; margin-bottom: 10px; padding: 5px; }
+    button { padding: 5px 10px; margin-right: 5px; }
+    #saveConfirmation { color: green; display: none; margin-top: 10px; }
+    .shortcuts { margin-top: 20px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <h2>URL Grabber Settings</h2>
+  <label for="webhookUrl">Zapier Webhook URL:</label>
+  <input type="text" id="webhookUrl" placeholder="Enter Zapier Webhook URL">
+  <label for="label">Label:</label>
+  <input type="text" id="label" placeholder="Enter Label">
+  <button id="save">Save</button>
+  <div id="saveConfirmation">Settings saved successfully!</div>
+  
+  <div class="shortcuts">
+    <h3>Keyboard Shortcuts</h3>
+    <p>Capture & Close: Cmd+Shift+S (Mac) / Ctrl+Shift+S (Windows/Linux)</p>
+    <p>Capture with Title & Close: Cmd+Shift+A (Mac) / Ctrl+Shift+A (Windows/Linux)</p>
+    <button id="customizeShortcuts">Customize Shortcuts</button>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
